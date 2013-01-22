@@ -24,7 +24,7 @@ class ApplicationController < ActionController::API
   # For all responses in this controller, return the CORS access control headers.
 
   def cors_set_access_control_headers
-    headers['Access-Control-Allow-Origin'] = 'http://localhost:8000'
+    headers['Access-Control-Allow-Origin'] = 'http://categorize-temp.wiglepedia.org'
     headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
     headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Content-Type'
     headers['Access-Control-Allow-Credentials'] = 'true'
@@ -37,7 +37,7 @@ class ApplicationController < ActionController::API
 
   def cors_preflight_check
     if request.method == 'OPTIONS'
-      headers['Access-Control-Allow-Origin'] = 'http://localhost:8000'
+      headers['Access-Control-Allow-Origin'] = 'http://categorize-temp.wiglepedia.org'
       headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
       headers['Access-Control-Allow-Headers'] = 'X-Requested-With, X-Prototype-Version, Content-Type'
       headers['Access-Control-Allow-Credentials'] = 'true'
